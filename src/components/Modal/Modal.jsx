@@ -5,7 +5,7 @@ import css from './Modal.module.css';
 export const Modal = ({ image, onClose }) => {
   useEffect(() => {
     const handleEsc = e => {
-      if (e.code === 'Escape') onClose();
+      if (e.key === 'Escape') onClose();
     };
     window.addEventListener('keydown', handleEsc);
     return () => window.removeEventListener('keydown', handleEsc);
